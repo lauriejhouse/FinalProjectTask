@@ -12,9 +12,12 @@ import CoreData
 
 class TaskViewController: UITableViewController, NewTaskViewControllerDelegate {
     
+    // MARK: - Properties
+    
     var goalItem: GoalItem?
     var managedContext: NSManagedObjectContext!
-
+    
+    
     // MARK: - Table View Data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,7 +79,11 @@ class TaskViewController: UITableViewController, NewTaskViewControllerDelegate {
         let imageView = cell.viewWithTag(3000) as? UIImageView
         
         if task.isChecked != true {
+<<<<<<< HEAD
             imageView?.image = #imageLiteral(resourceName: "checked-3")
+=======
+            imageView?.image = #imageLiteral(resourceName: "No Icon")
+>>>>>>> FinalProjectBranch
         } else {
             imageView?.image = #imageLiteral(resourceName: "checked-3")
         }
@@ -141,4 +148,3 @@ class TaskViewController: UITableViewController, NewTaskViewControllerDelegate {
         }
     }
 }
-

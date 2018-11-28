@@ -229,6 +229,7 @@
 					8CD0C413215522A300967947 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
+<<<<<<< HEAD
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -237,6 +238,8 @@
 								enabled = 0;
 							};
 						};
+=======
+>>>>>>> FinalProjectBranch
 					};
 					8CD0C42A215522A500967947 = {
 						CreatedOnToolsVersion = 9.4.1;

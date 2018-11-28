@@ -51,7 +51,7 @@ class MainGoalsViewController: UITableViewController, NewGoalViewControllerDeleg
         if let goalItems = goalItems {
             return goalItems.count
         }
-        return 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -214,7 +214,11 @@ class MainGoalsViewController: UITableViewController, NewGoalViewControllerDeleg
             } else if checkedItems == tasksCount {
                 tasksDoneLabel?.text = "All Tasks Completed!"
             } else {
+<<<<<<< HEAD
                 tasksDoneLabel?.text = "\(checkedItems) of \(tasksCount) Completed"
+=======
+                tasksDoneLabel?.text = "\(checkedItems) / \(tasksCount) Completed"
+>>>>>>> FinalProjectBranch
             }
         }
         

@@ -71,16 +71,28 @@ class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPic
         
         if let goal = goalToEdit {
             title = "Edit Goal"
+<<<<<<< HEAD
             goalTextField.text = goal.text
             doneBtn.isEnabled = true
             iconLabel.text = goal.iconName
             imageView.image = UIImage(named: goal.iconName!)
+=======
+            textField.text = goal.text
+            doneButton.isEnabled = true
+            iconNameLabel.text = goal.iconName
+//            iconImageView.image = UIImage(named: goal.iconName!)
+>>>>>>> FinalProjectBranch
         } else {
             let randomGoals = placeholderGoals.randomItem()
             goalTextField.placeholder = "\(randomGoals!)..."
             let random = icons.randomItem()
+<<<<<<< HEAD
             imageView.image = UIImage(named: random!)
             iconLabel.text = random
+=======
+//            iconImageView.image = UIImage(named: random!)
+            iconNameLabel.text = random
+>>>>>>> FinalProjectBranch
         }
         
     }
@@ -134,8 +146,13 @@ class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPic
     // MARK: - Icon Picker Delegate
     
     func iconPicker(_ picker: IconPickerViewController, didPick iconName: String) {
+<<<<<<< HEAD
         imageView.image = UIImage(named: iconName)
         iconLabel.text = iconName
+=======
+//        iconImageView.image = UIImage(named: iconName)
+        iconNameLabel.text = iconName
+>>>>>>> FinalProjectBranch
         navigationController?.popViewController(animated: true)
     }
     

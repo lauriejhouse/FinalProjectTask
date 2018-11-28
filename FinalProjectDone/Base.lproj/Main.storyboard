@@ -6,7 +6,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+<<<<<<< HEAD
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+=======
+>>>>>>> FinalProjectBranch
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -136,6 +139,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+<<<<<<< HEAD
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="work" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-i7-8ad">
                                                     <rect key="frame" x="267" y="4" width="36" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,15 +147,26 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpg-7P-sB2">
                                                     <rect key="frame" x="45" y="10.5" width="82" height="22.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+=======
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Long term goal..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxB-j0-J9A">
+                                                    <rect key="frame" x="16" y="6.5" width="343" height="30.5"/>
+>>>>>>> FinalProjectBranch
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+<<<<<<< HEAD
                                                 <constraint firstItem="Kpg-7P-sB2" firstAttribute="leading" secondItem="sFd-qn-9tV" secondAttribute="leadingMargin" constant="29" id="C9h-5o-5KB"/>
                                                 <constraint firstItem="Kpg-7P-sB2" firstAttribute="centerY" secondItem="sFd-qn-9tV" secondAttribute="centerY" id="PNc-y1-BCW"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kpg-7P-sB2" secondAttribute="trailing" constant="20" symbolic="YES" id="WQl-zr-4e9"/>
                                                 <constraint firstItem="Kpg-7P-sB2" firstAttribute="bottom" secondItem="sFd-qn-9tV" secondAttribute="bottomMargin" id="ZtN-nN-SXp"/>
+=======
+                                                <constraint firstItem="vxB-j0-J9A" firstAttribute="centerY" secondItem="7pK-rv-8bl" secondAttribute="centerY" id="Psq-gO-6mw"/>
+                                                <constraint firstItem="vxB-j0-J9A" firstAttribute="leading" secondItem="7pK-rv-8bl" secondAttribute="leadingMargin" id="aQx-N8-qQ3"/>
+                                                <constraint firstItem="vxB-j0-J9A" firstAttribute="trailing" secondItem="7pK-rv-8bl" secondAttribute="trailingMargin" id="d8U-mK-C3k"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vxB-j0-J9A" secondAttribute="bottom" constant="-4" id="fGY-a6-rXO"/>
+>>>>>>> FinalProjectBranch
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -169,18 +184,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+<<<<<<< HEAD
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Long term goal..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxB-j0-J9A">
                                                     <rect key="frame" x="16" y="6.5" width="343" height="30.5"/>
+=======
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpg-7P-sB2">
+                                                    <rect key="frame" x="45" y="10.5" width="82" height="22.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+>>>>>>> FinalProjectBranch
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+<<<<<<< HEAD
                                                 <constraint firstItem="vxB-j0-J9A" firstAttribute="centerY" secondItem="7pK-rv-8bl" secondAttribute="centerY" id="Psq-gO-6mw"/>
                                                 <constraint firstItem="vxB-j0-J9A" firstAttribute="leading" secondItem="7pK-rv-8bl" secondAttribute="leadingMargin" id="aQx-N8-qQ3"/>
                                                 <constraint firstItem="vxB-j0-J9A" firstAttribute="trailing" secondItem="7pK-rv-8bl" secondAttribute="trailingMargin" id="d8U-mK-C3k"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="vxB-j0-J9A" secondAttribute="bottom" constant="-4" id="fGY-a6-rXO"/>
+=======
+                                                <constraint firstItem="Kpg-7P-sB2" firstAttribute="leading" secondItem="sFd-qn-9tV" secondAttribute="leadingMargin" constant="29" id="C9h-5o-5KB"/>
+                                                <constraint firstItem="Kpg-7P-sB2" firstAttribute="centerY" secondItem="sFd-qn-9tV" secondAttribute="centerY" id="PNc-y1-BCW"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kpg-7P-sB2" secondAttribute="trailing" constant="20" symbolic="YES" id="WQl-zr-4e9"/>
+                                                <constraint firstItem="Kpg-7P-sB2" firstAttribute="bottom" secondItem="sFd-qn-9tV" secondAttribute="bottomMargin" id="ZtN-nN-SXp"/>
+>>>>>>> FinalProjectBranch
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -205,10 +233,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="doneBtn" destination="TFl-k4-VZp" id="BPo-Uj-Gii"/>
                         <outlet property="goalTextField" destination="vxB-j0-J9A" id="jTl-vJ-44M"/>
                         <outlet property="iconLabel" destination="Kpg-7P-sB2" id="q05-YO-CAl"/>
                         <outlet property="imageView" destination="PaN-i7-8ad" id="YL8-zs-Cck"/>
+=======
+                        <outlet property="doneButton" destination="TFl-k4-VZp" id="TtB-3J-SMa"/>
+                        <outlet property="iconNameLabel" destination="Kpg-7P-sB2" id="FbI-q8-ksP"/>
+                        <outlet property="textField" destination="vxB-j0-J9A" id="gkz-aJ-1JO"/>
+>>>>>>> FinalProjectBranch
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2y-m8-t1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -290,15 +324,31 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+<<<<<<< HEAD
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CGK-d3-KAq">
                                             <rect key="frame" x="320" y="21" width="26" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+=======
+                                        <imageView userInteractionEnabled="NO" tag="3000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cdj-ow-mZr">
+                                            <rect key="frame" x="319" y="21.5" width="26" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="doW-YI-inl"/>
+                                                <constraint firstAttribute="width" constant="26" id="zRO-cQ-nzs"/>
+                                            </constraints>
+>>>>>>> FinalProjectBranch
                                         </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="1ov-PO-EOr" secondAttribute="trailing" id="7pV-oS-vOL"/>
+<<<<<<< HEAD
                                         <constraint firstAttribute="bottomMargin" secondItem="1ov-PO-EOr" secondAttribute="bottom" constant="13" id="Q5L-og-yhX"/>
                                         <constraint firstItem="1ov-PO-EOr" firstAttribute="leading" secondItem="JhA-Pf-BrR" secondAttribute="leadingMargin" constant="38" id="ejN-Z2-Cis"/>
+=======
+                                        <constraint firstItem="Cdj-ow-mZr" firstAttribute="centerY" secondItem="1ov-PO-EOr" secondAttribute="centerY" id="LEs-Lb-n2O"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1ov-PO-EOr" secondAttribute="bottom" constant="13" id="Q5L-og-yhX"/>
+                                        <constraint firstItem="1ov-PO-EOr" firstAttribute="leading" secondItem="JhA-Pf-BrR" secondAttribute="leadingMargin" constant="38" id="ejN-Z2-Cis"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Cdj-ow-mZr" secondAttribute="trailing" constant="14" id="kWz-fw-8dF"/>
+>>>>>>> FinalProjectBranch
                                         <constraint firstItem="1ov-PO-EOr" firstAttribute="centerY" secondItem="JhA-Pf-BrR" secondAttribute="centerY" id="lHR-Xh-BLb"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -309,7 +359,7 @@
                             <outlet property="delegate" destination="vyD-RM-eD5" id="sRs-dJ-o7M"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Name of Goal" id="cAu-ON-bGD">
+                    <navigationItem key="navigationItem" title="Name of Task" id="cAu-ON-bGD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ofS-Xw-RDV">
                             <connections>
                                 <segue destination="fGS-dK-xYt" kind="popoverPresentation" identifier="AddTask" popoverAnchorBarButtonItem="ofS-Xw-RDV" id="dIH-4T-Lgg">
@@ -377,7 +427,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+<<<<<<< HEAD
                         <outlet property="textField" destination="Y4V-Km-ljB" id="Atn-Dy-xnP"/>
+=======
+                        <outlet property="textField" destination="Y4V-Km-ljB" id="wzY-OQ-2dX"/>
+>>>>>>> FinalProjectBranch
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rg-nf-4TB" userLabel="First Responder" sceneMemberID="firstResponder"/>
