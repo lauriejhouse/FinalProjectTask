@@ -21,11 +21,11 @@ class IconPickerViewController: UITableViewController {
     
     let icons = [
         "No Icon",
-        "Business",
+        "Work",
         "Computer",
         "Fun",
         "Self",
-        "Sport"
+        "Sports"
     ]
     
     

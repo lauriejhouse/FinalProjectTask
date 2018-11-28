@@ -54,7 +54,7 @@ class TaskViewController: UITableViewController, NewTaskViewControllerDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard let taskToDelete = self.goalItem?.tasks?[indexPath.row] as? TaskItem else { return }
         self.managedContext.delete(taskToDelete)
         self.save()
@@ -70,20 +70,21 @@ class TaskViewController: UITableViewController, NewTaskViewControllerDelegate {
     
     // MARK: - Custom Methods
     
+    //Can't get the checkmark to show up. Removed Tag so this wouldn't be called
     func configureCheckmark(for cell: UITableViewCell, with task: TaskItem) {
         
-        let imageView = cell.viewWithTag(3000) as! UIImageView
+        let imageView = cell.viewWithTag(3000) as? UIImageView
         
         if task.isChecked != true {
-            imageView.image = #imageLiteral(resourceName: "No Icon")
+            imageView?.image = #imageLiteral(resourceName: "checked-3")
         } else {
-            imageView.image = #imageLiteral(resourceName: "checked-3")
+            imageView?.image = #imageLiteral(resourceName: "checked-3")
         }
     }
     
     func configureText(for cell: UITableViewCell, with task: TaskItem) {
-        let taskLabel = cell.viewWithTag(2000) as! UILabel
-        taskLabel.text = task.text
+        let taskLabel = cell.viewWithTag(2000) as? UILabel
+        taskLabel?.text = task.text
     }
     
     func save() {

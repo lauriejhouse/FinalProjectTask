@@ -17,3 +17,10 @@ public class GoalItem: NSManagedObject {
 }
 
 }
+
+
+
+
+// // MARK: - Properties
+
+

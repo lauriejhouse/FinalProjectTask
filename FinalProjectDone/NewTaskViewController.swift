@@ -21,7 +21,7 @@ class NewTaskViewController: UITableViewController, UITextFieldDelegate {
     var managedContext: NSManagedObjectContext!
     
     weak var delegate: NewTaskViewControllerDelegate?
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class NewTaskViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        textField.becomeFirstResponder()
+        textField?.becomeFirstResponder()
     }
     
     
@@ -46,7 +46,7 @@ class NewTaskViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func done(_ sender: Any) {
         let task = NSEntityDescription.insertNewObject(forEntityName: "TaskItem", into: managedContext) as! TaskItem
-        task.text = textField.text!
+        task.text = textField?.text
         task.isChecked = false
         delegate?.newTaskViewController(self, didFinishAdding: task)
         print("done")

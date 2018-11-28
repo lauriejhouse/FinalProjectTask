@@ -18,19 +18,20 @@ protocol NewGoalViewControllerDelegate: class {
 
 class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPickerViewControllerDelegate {
     
-    // MARK: - Properties
+
     
-    @IBOutlet weak var doneButton: UIBarButtonItem!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var iconNameLabel: UILabel!
+    @IBOutlet weak var doneBtn: UIBarButtonItem!
+    
+    @IBOutlet weak var goalTextField: UITextField!
+    @IBOutlet weak var iconLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var managedContext: NSManagedObjectContext!
     
     weak var delegate: NewGoalViewControllerDelegate?
     var goalToEdit: GoalItem?
     
-    let icons = ["No Icon", "Sport", "Self", "Business", "Computer", "Fun"]
+    let icons = ["No Icon", "Sport", "Self", "work", "Computer", "Fun"]
     var placeholderGoals = ["Learn Programming", "Learn Piano", "Build Rome", "Become Enlightened", "Breathe Underwater", "Turn Back Time", "Run A Marathon", "Read 10 Books", "Quit Job", "Deactivate Facebook"]
     
     
@@ -47,13 +48,13 @@ class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPic
     
     @IBAction func done(_ sender: Any) {
         if let goal = goalToEdit {
-            goal.text = textField.text!
-            goal.iconName = iconNameLabel.text!
+            goal.text = goalTextField.text!
+            goal.iconName = iconLabel.text!
             delegate?.newGoalViewController(self, didFinishEditing: goal)
         } else {
             let goal = NSEntityDescription.insertNewObject(forEntityName: "GoalItem", into: managedContext) as! GoalItem
-            goal.text = textField.text!
-            goal.iconName = iconNameLabel.text
+            goal.text = goalTextField.text!
+            goal.iconName = iconLabel.text
             delegate?.newGoalViewController(self, didFinishAdding: goal)
         }
         
@@ -70,23 +71,23 @@ class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPic
         
         if let goal = goalToEdit {
             title = "Edit Goal"
-            textField.text = goal.text
-            doneButton.isEnabled = true
-            iconNameLabel.text = goal.iconName
-            iconImageView.image = UIImage(named: goal.iconName!)
+            goalTextField.text = goal.text
+            doneBtn.isEnabled = true
+            iconLabel.text = goal.iconName
+            imageView.image = UIImage(named: goal.iconName!)
         } else {
             let randomGoals = placeholderGoals.randomItem()
-            textField.placeholder = "\(randomGoals!)..."
+            goalTextField.placeholder = "\(randomGoals!)..."
             let random = icons.randomItem()
-            iconImageView.image = UIImage(named: random!)
-            iconNameLabel.text = random
+            imageView.image = UIImage(named: random!)
+            iconLabel.text = random
         }
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        textField.becomeFirstResponder()
+        goalTextField.becomeFirstResponder()
     }
     
     
@@ -120,7 +121,7 @@ class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPic
         let oldText = textField.text! as NSString
         let newText = oldText.replacingCharacters(in: range, with: string) as NSString
         
-        doneButton.isEnabled = newText.length > 0
+        doneBtn.isEnabled = newText.length > 0
         
         return true
         
@@ -133,8 +134,8 @@ class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPic
     // MARK: - Icon Picker Delegate
     
     func iconPicker(_ picker: IconPickerViewController, didPick iconName: String) {
-        iconImageView.image = UIImage(named: iconName)
-        iconNameLabel.text = iconName
+        imageView.image = UIImage(named: iconName)
+        iconLabel.text = iconName
         navigationController?.popViewController(animated: true)
     }
     
