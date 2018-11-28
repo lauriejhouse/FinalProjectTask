@@ -80,7 +80,7 @@ class TaskViewController: UITableViewController, NewTaskViewControllerDelegate {
         
         if task.isChecked != true {
 <<<<<<< HEAD
-            imageView?.image = #imageLiteral(resourceName: "checked-3")
+            imageView?.image = #imageLiteral(resourceName: "checked")
 =======
             imageView?.image = #imageLiteral(resourceName: "No Icon")
 >>>>>>> FinalProjectBranch
