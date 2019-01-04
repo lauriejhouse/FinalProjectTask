@@ -4,11 +4,11 @@
 //
 //  Created by Jackie Norstrom on 9/21/18.
 //  Copyright © 2018 Jackie Norstrom. All rights reserved.
-//
+//Why won't you work
 
 import Foundation
 import CoreData
-//import CloudKit
+import CloudKit
 
 @objc(GoalItem)
 public class GoalItem: NSManagedObject {
