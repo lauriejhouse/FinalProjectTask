@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-import CloudKit
+//import CloudKit
 
 @objc(GoalItem)
 public class GoalItem: NSManagedObject {
