@@ -37,13 +37,16 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6b-VZ-uk8">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6b-VZ-uk8">
                                             <rect key="frame" x="13" y="22.5" width="30" height="28.5"/>
-                                            <state key="normal" title="Edit"/>
                                             <connections>
                                                 <segue destination="Pdn-Ix-ufP" kind="presentation" identifier="EditGoal" id="rKO-F6-ElL"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Edit" highlightedImage="Edit" translatesAutoresizingMaskIntoConstraints="NO" id="rbe-6j-q0M">
+                                            <rect key="frame" x="16" y="24" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sTN-2Z-eVa" secondAttribute="trailing" constant="20" symbolic="YES" id="I5c-uV-qIV"/>
@@ -132,7 +135,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Business" translatesAutoresizingMaskIntoConstraints="NO" id="LWp-3r-PaX">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Computer" translatesAutoresizingMaskIntoConstraints="NO" id="LWp-3r-PaX">
                                                     <rect key="frame" x="295" y="10" width="26" height="26"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -157,18 +160,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Long Term Goal" id="JqJ-8k-WiR">
-                        <leftBarButtonItems>
-                            <barButtonItem systemItem="cancel" id="64L-8Q-ldh">
-                                <connections>
-                                    <action selector="cancel:" destination="2IT-Uf-LPB" id="gmd-S5-SKf"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="done" id="TFl-k4-VZp">
-                                <connections>
-                                    <action selector="done:" destination="2IT-Uf-LPB" id="hiK-Ah-7Mm"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="64L-8Q-ldh">
+                            <connections>
+                                <action selector="cancel:" destination="2IT-Uf-LPB" id="gmd-S5-SKf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TFl-k4-VZp">
+                            <connections>
+                                <action selector="done:" destination="2IT-Uf-LPB" id="hiK-Ah-7Mm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="doneBtn" destination="TFl-k4-VZp" id="hV1-WP-JHc"/>
@@ -424,7 +425,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Business" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="Computer" width="128" height="128"/>
+        <image name="Edit" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="sfR-BE-2sE"/>

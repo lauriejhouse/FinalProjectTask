@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "icons8-spa-flower-64.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "003-buddhist-yoga-pose.png",
       "scale" : "2x"
     },
     {

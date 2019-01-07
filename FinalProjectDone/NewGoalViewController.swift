@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 import CoreData
-import CloudKit
+
 
 protocol NewGoalViewControllerDelegate: class {
     func newGoalViewControllerDidCancel(_ controller: NewGoalViewController)
@@ -20,25 +20,9 @@ protocol NewGoalViewControllerDelegate: class {
 class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPickerViewControllerDelegate {
     
     // MARK: - Properties
-    
-    //https://github.com/paulw11/Seam3/blob/master/Sources/Classes/NSManagedObject%2BCKRecord.swift - NSManagedObject+CKRecord.swift
-    
-    
-    var recordZone: CKRecordZone!
-    
-    
-  //Going to need custom zone?
-    
-//    let recordZone = CKRecordZone.ID(zoneName: "_defaultZone", ownerName: "_6c6777e3b8e64bf08735b7eddc6cf782")
-//    let ckRecordID = CKRecord.ID(recordName: recordIDString, zoneID: recordZone)
-//    let ckRecord = CKRecord(recordType: myRecordType, recordID: ckRecordID)
 
-    let container = CKContainer.default()
-    var currentRecord: CKRecord?
-    lazy var publicDB: CKDatabase! = {
-        let DB = self.container.publicCloudDatabase
-        return DB
-    }()
+    
+    
     
     var managedContext: NSManagedObjectContext!
     
@@ -46,8 +30,8 @@ class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPic
     var goalToEdit: GoalItem?
     
     
-    let icons = ["No Icon", "Sport", "Self", "Business", "Computer", "Fun"]
-    var placeholderGoals = ["Learn Programming", "Learn Piano", "Build Rome", "Become Enlightened", "Breathe Underwater", "Turn Back Time", "Run A Marathon", "Read 10 Books", "Quit Job", "Deactivate Facebook"]
+    let icons = ["No Icon", "Sports", "Self", "Business", "Computer", "Video Games"]
+    var placeholderGoals = ["Learn Programming", "Learn Saxophone", "Conquer a City", "Become Enlightened", "Breathe Underwater", "Turn Back Time", "Run A Marathon", "Read 100 Books", "Quit My Job", "Deactivate Facebook"]
     
     
     
@@ -62,15 +46,6 @@ class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPic
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        publicDB?.save(recordZone!,
-//                       completionHandler: {(recordzone, error) in
-//                        if (error != nil) {
-//                            self.notifyUser("Record Zone Error",
-//                                            message: "Failed to create custom record zone.")
-//                        } else {
-//                            print("Saved record zone")
-//                        }
-//        })
         
         
         
@@ -79,7 +54,7 @@ class NewGoalViewController: UITableViewController, UITextFieldDelegate, IconPic
             goalTextField.text = goal.text
             doneBtn.isEnabled = true
             iconLabel.text = goal.iconName
-            imageViewIcon.image = UIImage(named: goal.iconName!)
+            imageViewIcon.image = UIImage(named: goal.iconName ?? "")
         } else {
             let randomGoals = placeholderGoals.randomItem()
             goalTextField.placeholder = "\(randomGoals!)..."

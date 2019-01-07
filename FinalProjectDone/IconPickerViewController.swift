@@ -23,7 +23,7 @@ class IconPickerViewController: UITableViewController {
         "No Icon",
         "Business",
         "Computer",
-        "Fun",
+        "Video Games",
         "Self",
         "Sport"
     ]

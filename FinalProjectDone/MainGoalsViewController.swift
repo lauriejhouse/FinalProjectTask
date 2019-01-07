@@ -34,7 +34,7 @@ import UIKit
 import Foundation
 import CoreData
 import TableViewDragger
-import CloudKit
+//import CloudKit
 
 
 class MainGoalsViewController: UITableViewController, NewGoalViewControllerDelegate {
@@ -44,12 +44,12 @@ class MainGoalsViewController: UITableViewController, NewGoalViewControllerDeleg
 
 
     //For CloudKit
-    let container = CKContainer.default()
-    let record = CKRecord(recordType: "Goal")
-    lazy var publicDB: CKDatabase! = {
-        let DB = self.container.publicCloudDatabase
-        return DB
-    }()
+//    let container = CKContainer.default()
+//    let record = CKRecord(recordType: "Goal")
+//    lazy var publicDB: CKDatabase! = {
+//        let DB = self.container.publicCloudDatabase
+//        return DB
+//    }()
 
     
     // MARK: - Properties
@@ -90,29 +90,30 @@ class MainGoalsViewController: UITableViewController, NewGoalViewControllerDeleg
         dragger.alphaForCell = 0.7
         dragger.opacityForShadowOfCell = 1
         
-        let predicate = NSPredicate(format: "Task = %@", "Task to complete")
-        let query = CKQuery(recordType: "Goal", predicate: predicate)
-        
-        publicDB.perform(query, inZoneWith: nil) { [unowned self] results, error in
-            if let error = error {
-                DispatchQueue.main.async {
-                    print("Cloud Query Error - Fetch Establishments: \(error)")
-                }
-                return
-            }
-            
-            self.goalItems?.removeAll(keepingCapacity: true)
-            results?.forEach({ (record: CKRecord) in
-                
-                let goalItem = GoalItem.goalItemFromRecord(record: record, managedContext: self.managedContext)
-                self.goalItems?.append (goalItem)
-                print(record)
-            })
-            DispatchQueue.main.async {
-//                self.delegate?.modelUpdated()
-                self.tableView.reloadData()
-
-            }}
+//        let predicate = NSPredicate(format: "Task = %@", "Task to complete")
+//        let query = CKQuery(recordType: "Goal", predicate: predicate)
+//
+//        publicDB.perform(query, inZoneWith: nil) { [unowned self] results, error in
+//            if let error = error {
+//                DispatchQueue.main.async {
+//                    print("Cloud Query Error - Fetch Establishments: \(error)")
+//                }
+//                return
+//            }
+//
+//            self.goalItems?.removeAll(keepingCapacity: true)
+//            results?.forEach({ (record: CKRecord) in
+//
+//                let goalItem = GoalItem.goalItemFromRecord(record: record, managedContext: self.managedContext)
+//                self.goalItems?.append (goalItem)
+//                print(record)
+//            })
+//            DispatchQueue.main.async {
+////                self.delegate?.modelUpdated()
+//                self.tableView.reloadData()
+//
+//            }}
+//
         
     }
     
@@ -141,11 +142,15 @@ class MainGoalsViewController: UITableViewController, NewGoalViewControllerDeleg
             let goalItem = goalItems[indexPath.row]
             configure(cell, with: goalItem)
         }
-        
+        //trying to get edit button on cell to be an image.
         if let button = cell.viewWithTag(999) as? UIButton {
             button.tag = indexPath.row
         }
-        
+//        let orangeButton = UIButton(type: .custom)
+//        let slicedBorderTemplate = UIImage(named: "Edit")
+//        orangeButton.setBackgroundImage(slicedBorderTemplate, for: .normal)
+
+
         return cell
     }
     

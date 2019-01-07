@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "checked-3.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "001-gamepad.png",
       "scale" : "2x"
     },
     {
