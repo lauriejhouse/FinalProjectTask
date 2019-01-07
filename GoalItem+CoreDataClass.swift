@@ -4,7 +4,9 @@
 //
 //  Created by Jackie Norstrom on 9/21/18.
 //  Copyright © 2018 Jackie Norstrom. All rights reserved.
-//Why won't you work
+//This is the one that will be used for the first half of the final project.
+
+
 
 import Foundation
 import CoreData

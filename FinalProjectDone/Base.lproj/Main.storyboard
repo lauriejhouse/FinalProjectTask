@@ -157,16 +157,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Long Term Goal" id="JqJ-8k-WiR">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="64L-8Q-ldh">
-                            <connections>
-                                <action selector="cancel:" destination="2IT-Uf-LPB" id="gmd-S5-SKf"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TFl-k4-VZp">
-                            <connections>
-                                <action selector="done:" destination="2IT-Uf-LPB" id="hiK-Ah-7Mm"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="cancel" id="64L-8Q-ldh">
+                                <connections>
+                                    <action selector="cancel:" destination="2IT-Uf-LPB" id="gmd-S5-SKf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="done" id="TFl-k4-VZp">
+                                <connections>
+                                    <action selector="done:" destination="2IT-Uf-LPB" id="hiK-Ah-7Mm"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="doneBtn" destination="TFl-k4-VZp" id="hV1-WP-JHc"/>
